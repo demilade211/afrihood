@@ -1,0 +1,9 @@
+#home-page{
+    width: 100%;
+    main{
+        border: 1px solid red; 
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
+    
+}
