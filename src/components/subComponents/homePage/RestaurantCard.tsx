@@ -2,9 +2,10 @@ import React from 'react'
 import pic from "../../../assets/images/pic.svg"
 import stars from "../../../assets/images/stars.svg"
 
-const RestaurantCard = () => {
+const RestaurantCard = (props:any) => {
+  const {setOne} = props
   return (
-    <div className='res-card'>
+    <div className='res-card' onClick={()=>setOne(false)}>
         <div className='left'>
             <h3>Lesukaa Restaurant (CateringService & Food Delivery)</h3>
             <p>40<span><img src={stars}/></span>(39)</p>

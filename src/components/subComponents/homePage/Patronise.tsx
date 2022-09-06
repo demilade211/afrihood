@@ -15,24 +15,34 @@ import u_globe from "../../../assets/images/check.svg"
 import phone from "../../../assets/images/phone.svg"
 import shield from "../../../assets/images/shield.svg"
 import check from "../../../assets/images/check.svg"
+import menu from "../../../assets/images/menu.svg"
+import slens from "../../../assets/images/slens.svg"
+import multiply from "../../../assets/images/multiply.svg"
 import RestaurantCard from './RestaurantCard'
 
 const Patronise = () => {
-    const [one, setOne] = useState(false)
+    const [one, setOne] = useState(true)
 
     return (
         <div className='patron-con'>
             {
                one ?<>
                     <div className='heading'>
-                        <div className='search'></div>
+                        <div className='search'>
+                            <div className="icon"><img src={menu} /></div>
+                            <input type="text"/>
+                            <div className="buttons">
+                                <div className="lens"><img src={slens} /></div>
+                                <div className="cancel"><img src={multiply} /></div>
+                            </div>
+                        </div>
                         <div className='filters'>
                             <div className='filter'><img src={rate} /></div>
                             <div className='filter'><img src={hour} /></div>
                             <div className='filter'><img src={filter} /></div>
                         </div>
                     </div>
-                    <RestaurantCard />
+                    <RestaurantCard setOne={setOne} />
                     <RestaurantCard />
                 </>:
                 <>

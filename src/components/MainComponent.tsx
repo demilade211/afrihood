@@ -5,11 +5,7 @@ const MainComponent = (props:any) => {
   return (
     <div id='main-comp'>
       {!toggle&&<BidPage/>}
-      {toggle&&
-        <div className='map-con'>
-
-        </div>
-      }
+      {toggle&& <div className='map-con'> </div> }
     </div>
   )
 }
